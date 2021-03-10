@@ -8,6 +8,6 @@ defmodule ListFilter do
     end)
   end
 
-  def handle_number({_, _} = parse_number), do: Integer.is_odd(elem(parse_number, 0))
-  def handle_number(:error), do: false
+  defp handle_number({_, _} = parse_number), do: Integer.is_odd(elem(parse_number, 0))
+  defp handle_number(:error), do: false
 end
